@@ -20,7 +20,7 @@ services:
       MYSQL_PASSWORD: "password"
       DATABASES: "mydb"
       CRON_SCHEDULE: "0 0 * * *" # once a day
-      DROPBOX_FILEPATH: "cuentas"
+      DROPBOX_FILEPATH: "dump"
       DROPBOX_ACCESS_TOKEN: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     depends_on:
       - db
