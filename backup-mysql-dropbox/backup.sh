@@ -5,7 +5,7 @@ date
 
 echo "Backing up MySQL..."
 
-OPTS="-h $MYSQL_HOST -P $MYSQL_PORT -u$MYSQL_USER -p$MYSQL_PASSWORD"
+MYSQL_HOST_OPTS="-h $MYSQL_HOST -P $MYSQL_PORT -u$MYSQL_USER -p$MYSQL_PASSWORD"
 databases=$(mysql $MYSQL_HOST_OPTS -e 'SHOW DATABASES;' --silent)
 
 for database in $databases
