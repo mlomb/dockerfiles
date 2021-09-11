@@ -12,7 +12,7 @@ ENV DROPBOX_FILE "database"
 ENV DROPBOX_ACCESS_TOKEN ""
 ENV CRON_SCHEDULE "0 0 * * *"
 
-RUN echo "$CRON_SCHEDULE /backup.sh" > /etc/crontabs/root
+COPY run.sh run.sh
 COPY backup.sh backup.sh
 
-CMD ["crond", "-f", "-d", "8", ">", "/proc/1/fd/1", "2>", "/proc/1/fd/2"]
+CMD ["sh", "run.sh", ">", "/proc/1/fd/1", "2>", "/proc/1/fd/2"]
