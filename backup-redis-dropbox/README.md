@@ -13,7 +13,7 @@ services:
     restart: always
     environment:
       REDIS_HOST: "db"
-      CRON_SCHEDULE: "* * * * *"
+      CRON_SCHEDULE: "0 0 * * *" # once a day
       DROPBOX_FILEPATH: "dump"
       DROPBOX_ACCESS_TOKEN: "XXXXXXXXXXXXXX"
     depends_on:
