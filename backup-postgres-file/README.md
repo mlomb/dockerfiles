@@ -11,7 +11,7 @@ services:
       POSTGRES_PASSWORD=password
 
   backup:
-    image: "mlomb/backup-postgres-dropbox"
+    image: "mlomb/backup-postgres-file"
     restart: always
     environment:
       POSTGRES_HOST: "db"
