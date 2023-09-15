@@ -13,7 +13,7 @@ do
     echo "Database: $database"
     PGPASSWORD="$POSTGRES_PASSWORD" pg_dump --inserts --column-inserts $PG_HOST_OPTS $database \
       | gzip \
-      > $TARGET_FOLDER/$database_$(date +"%Y-%m-%d").sql.gz
+      > $TARGET_FOLDER/${database}_$(date +"%Y-%m-%d").sql.gz
 done
 
 echo "Done."

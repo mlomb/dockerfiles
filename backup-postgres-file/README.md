@@ -22,6 +22,8 @@ services:
       DATABASES: "mydb"
       CRON_SCHEDULE: "0 0 * * *" # once a day
       TARGET_FOLDER: "/backups"
+    volumes:
+      - /backups:/backups
     depends_on:
       - db
 ```
